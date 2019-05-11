@@ -13,11 +13,44 @@
     >
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/SignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Register"
+        android:text="Sing Up"
         android:textColor="@color/colorAccent"
         android:textSize="25dp" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#ffffff"
+        android:hint="Enter your email"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#ffffff"
+        android:hint="Enter password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="Register" />
+
+    <TextView
+        android:id="@+id/textViewSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Already registered? Sign in here."
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent" />
+
 </LinearLayout>

@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "708113855585-pc4gmbpal7mefujq64387q20nenkuptk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.space_invaders",
+            "certificate_hash": "d8c29cc89c8ce9a57bb915cbf61f32bd3660300e"
+          }
+        },
+        {
           "client_id": "708113855585-shi1psjp7qd0bin8v0bmmml8ftk2o3ap.apps.googleusercontent.com",
           "client_type": 3
         }

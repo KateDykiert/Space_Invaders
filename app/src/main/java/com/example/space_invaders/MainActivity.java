@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Button;
 import android.content.Intent;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.firebase.FirebaseApp;
 
 public class MainActivity extends AppCompatActivity {
     TextView myView;
@@ -17,11 +20,17 @@ public class MainActivity extends AppCompatActivity {
     private Button login;
     private Button Register;
     private Button Guest;
+
+    private static final String TAG = "MainActivity";
+
+    private AdView mAdView;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        FirebaseApp.initializeApp(this);
         //Fonts
         myView = (TextView) findViewById(R.id.GameName);
         myFont = Typeface.createFromAsset(this.getAssets(), "Fonts/ca.ttf");
@@ -57,6 +66,10 @@ public class MainActivity extends AppCompatActivity {
                 openGuest();
             }
         });
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
     }
 
     public void openLogin()

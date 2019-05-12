@@ -24,20 +24,22 @@
     <EditText
         android:id="@+id/editTextEmail"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_height="18dp"
+        android:layout_margin="5dp"
         android:background="#ffffff"
         android:hint="Enter your email"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:textSize="12sp" />
 
     <EditText
         android:id="@+id/editTextPassword"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_height="18dp"
+        android:layout_margin="5dp"
         android:background="#ffffff"
         android:hint="Enter password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:textSize="12sp" />
 
     <Button
         android:id="@+id/buttonRegister"
@@ -51,6 +53,7 @@
         android:layout_height="wrap_content"
         android:text="Already registered? Sign in here."
         android:textAlignment="center"
-        android:textColor="@color/colorAccent" />
+        android:textColor="@color/colorAccent"
+        android:textSize="10sp" />
 
 </LinearLayout>

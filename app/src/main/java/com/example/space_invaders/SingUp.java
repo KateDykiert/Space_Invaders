@@ -2,6 +2,8 @@ package com.example.space_invaders;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -59,6 +61,8 @@ public class SingUp extends AppCompatActivity implements View.OnClickListener {
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
 
         textViewSignIn = (TextView)findViewById(R.id.textViewSignIn);
+        textViewSignIn.setPaintFlags(textViewSignIn.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+        textViewSignIn.setTextColor(Color.parseColor("#FF6199C7"));
 
         registerButton.setOnClickListener(this);
         textViewSignIn.setOnClickListener(this);
@@ -88,8 +92,9 @@ public class SingUp extends AppCompatActivity implements View.OnClickListener {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-
+                    progressDialog.dismiss();
                     Toast.makeText(SingUp.this, "Registered Successfully",Toast.LENGTH_SHORT).show();
+                    finish();
                     //go to game panel
                 }
                 else{
@@ -119,6 +124,7 @@ public class SingUp extends AppCompatActivity implements View.OnClickListener {
 
         if(v == textViewSignIn)
         {
+            finish();
             Intent intent = new Intent(this, Login.class);
             startActivity(intent);
         }

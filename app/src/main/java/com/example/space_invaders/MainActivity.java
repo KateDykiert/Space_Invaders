@@ -25,12 +25,12 @@ public class MainActivity extends AppCompatActivity {
 
     private AdView mAdView;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        FirebaseApp.initializeApp(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        FirebaseApp.initializeApp(this);
+
         //Fonts
         myView = (TextView) findViewById(R.id.GameName);
         myFont = Typeface.createFromAsset(this.getAssets(), "Fonts/ca.ttf");

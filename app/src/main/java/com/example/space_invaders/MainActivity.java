@@ -1,8 +1,10 @@
 package com.example.space_invaders;
 
+import android.graphics.Point;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Button;
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         FirebaseApp.initializeApp(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         //Fonts
         myView = (TextView) findViewById(R.id.GameName);
@@ -86,7 +89,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void openGuest()
     {
-        //Intent intent = new Intent(this, SingUp.class);
-        //startActivity(intent);
+        SpaceInvadersView spaceInvadersView;
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        spaceInvadersView = new SpaceInvadersView(this, size.x, size.y);
+        setContentView(spaceInvadersView);
+
+        spaceInvadersView.resume();
+
+
+//               Intent intent = new Intent(this, Game.class);
+//                startActivity(intent);
     }
 }

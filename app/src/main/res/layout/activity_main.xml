@@ -7,7 +7,7 @@
     android:layout_height="fill_parent"
     android:background="@drawable/space"
     android:gravity="center"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     tools:context=".MainActivity">
 
     <TextView
